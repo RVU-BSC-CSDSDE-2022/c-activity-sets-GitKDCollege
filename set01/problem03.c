@@ -1,12 +1,29 @@
+//Add two numbers by Pass by Value.
+
 #include <stdio.h>
-int main(void){
-  int a,b;
-  printf("Enter first number\n");
+int input()
+{
+  int a;
+  printf("Enter the number 'a'\n");
   scanf("%d",&a);
-  printf("Enter second number\n");
-  scanf("%d",&b);
+  return a;
+}
+int add(int a, int b)
+{
   int sum;
   sum=a+b;
-  printf("Sum is %d",sum);
+  return sum;
+}
+void output(int a, int b, int sum)
+{
+  printf("The sum of %d and %d is %d",a,b,sum);
+}
+int main(void)
+{
+  int a,b,sum;
+  a=input();
+  b=input();
+  sum=add(a,b);
+  output(a,b,sum);
   return 0;
 }
