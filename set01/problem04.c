@@ -8,10 +8,9 @@ int input()
   scanf("%d",&a);
   return a;
 }
-int add(int a, int b, int *sum)
+void add(int a, int b, int *sum)
 {
   *sum=a+b;
-  return *sum;
 }
 void output(int a, int b, int *sum)
 {
@@ -21,7 +20,7 @@ int main(void){
   int a,b,sum;
   a=input();
   b=input();
-  sum=add(a,b,&sum);
+  add(a,b,&sum);
   output(a,b,&sum);
   return 0;
 }
